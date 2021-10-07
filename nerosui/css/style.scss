@@ -1,0 +1,134 @@
+@import "reset";
+@import "style2";
+
+header {
+    border-bottom: 3px solid #efefef;
+
+    @media screen and (min-width: 62.5em) {
+        border-bottom: none;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+.h1 {
+    @extend h1;
+}
+// データ型（数値、文字列、真偽、色、リスト）
+// 宣言と初期化を行う。
+// 数値や単位をつけれる
+$base-font-size: 16px;
+// 色を変数に
+$grey-color: grey;
+$base-color: rgba(210, 210, 210, 0.5);
+// 文字列も
+$dir: "../assets/";
+$img: $dir + "image.png";
+// 四則演算ができる + - * /
+$second-font-size: $base-font-size - $base-font-size / 4;
+// !defaultをつけると値がない場合のみセットされる。
+$grey-color: red !default; // この場合は上ですでにgrey-colorが定義されてるのでgreyになる
+
+// CSSのカスタムプロパティも同時に使える
+:root {
+    --main-font-size: 12px;
+    --sub-font-size: 10px;
+}
+
+body {
+    color: $base-color;
+    font-size: $base-font-size;
+    p {
+        font-size: $second-font-size;
+    }
+    .sub {
+        // CSS関数の中で変数を使う場合は以下のようにエスケープする
+        font-size: calc(#{$base-font-size} - var(--main-font-size));
+    }
+}
+
+.img {
+    background-image: url(#{$img});
+}
+
+header {
+    background-color: $grey-color;
+    width: 100%;
+    height: $headerHeight;
+    // headerの中の.title **１行コメントはスラッシュ２個 変換時に消えます。
+    /* 従来のコメントも使えます こちらは返還後も残ります。*/
+    .title {
+        font-size: 3em;
+    }
+    &.dark-theme {
+        background-color: black;
+    }
+}
+
+.flex-row {
+    display: flex;
+    align-content: stretch;
+    height: calc(100vh - #{$headerHeight * 2});
+    div {
+        &:nth-child(1) {
+            flex: 1 0 0;
+            background-color: lighten(red, 20%);
+        }
+        &:nth-child(2) {
+            flex: 3 0 0;
+            background-color: lighten(red, 30%);
+        }
+        &:nth-child(3) {
+            flex: 1 0 0;
+            background-color: lighten(red, 40%);
+        }
+        &.content {
+            article {
+                display: block;
+                width: 80%;
+                margin: 5px auto;
+                height: 50px;
+                &:nth-child(1) {
+                    background-color: lighten(rgba(0, 0, 0, 0.8), 20%);
+                    color: darken(rgba(255, 255, 255, 0.9), 20%);
+                }
+                &:nth-child(2) {
+                    background-color: lighten(rgba(0, 0, 0, 0.8), 40%);
+                    color: darken(rgba(255, 255, 255, 0.9), 40%);
+                }
+                &:nth-child(3) {
+                    background-color: lighten(rgba(0, 0, 0, 0.8), 60%);
+                    color: darken(rgba(255, 255, 255, 0.9), 60%);
+                }
+                &:nth-child(4) {
+                    background-color: lighten(rgba(0, 0, 0, 0.8), 80%);
+                    color: darken(rgba(255, 255, 255, 0.9), 80%);
+                }
+                &:nth-child(5) {
+                    background-color: lighten(rgba(0, 0, 0, 0.8), 100%);
+                    color: darken(rgba(255, 255, 255, 0.9), 100%);
+                }
+
+                // forを使って書くと以下のようにもかける
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        background-color: lighten(rgba(0, 0, 0, 0.8), $i * 20%);
+                        color: darken(rgba(255, 255, 255, 0.9), $i * 20%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @extend header;
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+}
+
+a:last-child{
+    font-size:12px
+}

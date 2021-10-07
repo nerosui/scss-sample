@@ -1,0 +1,205 @@
+/* =Base
+-------------------------------------------------------------- */
+* {
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #262626;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.875em;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    transition: 0.3s ease all;
+}
+
+a {
+    color: #808080;
+    text-decoration: none;
+
+    &:hover {
+        color: #262626;
+        text-decoration: underline;
+    }
+}
+
+/* -- ul,li -- */
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* -- p -- */
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* -- em -- */
+
+em {
+    color: #999;
+    font-size: 0.8em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -- text -- */
+.textleft {
+    text-align: left;
+}
+
+.textright {
+    text-align: right;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+/* -- float -- */
+.alignleft {
+    margin: 0;
+    padding: 0 10px 10px 0;
+    float: left;
+}
+
+.alignright {
+    margin: 0;
+    padding: 10px 0 0 10px;
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.textleft {
+    @extend .textleft;
+}
+div.textright {
+    @extend .textright;
+}
+div.textcenter {
+    @extend .textcenter;
+}
+div.alignleft {
+    @extend .alignleft;
+}
+div.alignright {
+    @extend .alignright;
+}
+div.aligncenter {
+    @extend .aligncenter;
+}
+
+.error_message {
+    color: #ff0000;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 0.384615em;
+}
+
+.wp-caption {
+    margin: 10px 0;
+    padding-top: 4px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 3px;
+
+    img {
+        margin: 0;
+        padding: 0;
+        border: 0 none;
+    }
+
+    p {
+        font-size: 11px;
+        margin: 0;
+        padding: 0 4px 5px;
+        line-height: 17px;
+    }
+}
+
+/* -- input,select,textarea -- */
+
+input,
+select,
+textarea {
+    font-size: 1em;
+    appearance: none;
+    border-radius: 0;
+}
+
+select {
+    max-width: 100%;
+    padding: 0.5714285em 2.14286em 0.5714285em 0.5714285em;
+    background: url(images/select-arrow.gif) center right 10px no-repeat;
+    border: 1px solid #bbb;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #bbb;
+}
+
+input {
+    &[type="text"],
+    &[type="password"],
+    &[type="email"],
+    &[type="tel"],
+    &[type="search"],
+    &[type="url"] {
+        padding: 0.5714285em;
+        border: 1px solid #bbb;
+    }
+
+    &[type="button"],
+    &[type="submit"],
+    &[type="reset"] {
+        padding: 0.714288em 1.42857em;
+        background-color: #efefef;
+        border: none;
+        transition: 0.3s ease all;
+        border-radius: 3px;
+    }
+
+    &[type="button"]:hover,
+    &[type="submit"]:hover,
+    &[type="reset"]:hover {
+        background-color: #ddd;
+        cursor: pointer;
+    }
+
+    &[type="checkbox"] {
+        border: 1px solid #ccc;
+        appearance: checkbox;
+    }
+
+    &[type="radio"] {
+        border: 1px solid #bbb;
+        appearance: radio;
+    }
+
+    &[type="file"] {
+        border: none;
+    }
+}
