@@ -1,0 +1,105 @@
+// SCSSファイルのインポートに関しては拡張子はいらない
+
+// Bootstrapの全機能を取り込む場合はbootstrapを記載すればよい
+// @import "../bootstrap/scss/bootstrap";
+
+
+// カスタマイズする場合または必要なScssのみを取り込む場合
+
+// 1. functionsは必須
+@import "../bootstrap/scss/functions";
+
+// 2. デフォルトのCSSプロパティを書き換える
+
+// 例 基本カラー
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+// $red: #fdabb4;
+// $red: lighten($red, 5);
+
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+// 3. Bootstrapの基本機能を読み込む
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities";
+
+// 4. 必要なコンポーネントを読み込む
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+
+// @import "../bootstrap/scss/tables";
+// @import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+// @import "../bootstrap/scss/dropdown";
+// @import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/card";
+// @import "../bootstrap/scss/accordion";
+// @import "../bootstrap/scss/breadcrumb";
+// @import "../bootstrap/scss/pagination";
+@import "../bootstrap/scss/badge";
+// @import "../bootstrap/scss/alert";
+// @import "../bootstrap/scss/progress";
+@import "../bootstrap/scss/list-group";
+// @import "../bootstrap/scss/close";
+// @import "../bootstrap/scss/toasts";
+// @import "../bootstrap/scss/modal";
+// @import "../bootstrap/scss/tooltip";
+@import "../bootstrap/scss/popover";
+@import "../bootstrap/scss/carousel";
+// @import "../bootstrap/scss/spinners";
+// @import "../bootstrap/scss/offcanvas";
+
+// Helpers
+@import "../bootstrap/scss/helpers";
+
+// Utilities
+@import "../bootstrap/scss/utilities/api";
+
+// scss-docs-end import-stack
+
+// 5. Add additional custom code here
