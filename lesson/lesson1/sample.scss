@@ -1,0 +1,11 @@
+header {
+    background-color: gray;
+    width: 100%;
+    .title {
+        font-size: 3em;
+    }
+    // &をつけると親を参照します。
+    &.dark-theme {
+        background-color: gray;
+    }
+}

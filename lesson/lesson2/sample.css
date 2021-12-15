@@ -1,0 +1,18 @@
+.main {
+  font-size: 12px;
+}
+
+.sub {
+  font-size: calc(16px - var(--main-font-size));
+}
+
+:root {
+  --main-font-size: 2px;
+}
+
+.background-img {
+  background: grey;
+  background-image: "../assets/image.png";
+  color: red;
+}
+/*# sourceMappingURL=sample.css.map */

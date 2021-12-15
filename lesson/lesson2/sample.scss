@@ -1,0 +1,34 @@
+$base-font-size: 16px;
+
+// 色を変数に
+$grey-color: grey;
+$base-color: rgba(210, 210, 210, 0.5);
+
+// 文字列も
+$dir: "../assets/";
+$img: $dir + "image.png";
+
+// 四則演算ができる + - * /
+$second-font-size: $base-font-size - $base-font-size / 4;
+
+.main {
+    font-size: $second-font-size;
+}
+
+// CSSの関数内で使う時などは#{}で囲む
+.sub {
+    font-size: calc(#{$base-font-size} - var(--main-font-size));
+}
+:root {
+    --main-font-size: 2px;
+}
+
+// !defaultをつけると値がない場合のみセットされる。
+$grey-color: red !default;
+$red-color: red !default;
+
+.background-img {
+    background: $grey-color;
+    background-image: $img;
+    color: $red-color;
+}
