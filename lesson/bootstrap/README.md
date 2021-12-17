@@ -20,3 +20,9 @@ https://github.com/twbs/bootstrap/archive/v5.0.2.zip
 
 今回はサンプルとして[公式example](https://getbootstrap.jp/docs/5.0/examples/)の[Carousel](https://getbootstrap.jp/docs/5.0/examples/carousel/)を利用して解説します。
 
+## モジュール別ローディング
+
+[css/bootstrap.scss](css/bootstrap.scss)を参照
+
+必要なプロパティ、モジュールだけをインストールすることが可能。
+
